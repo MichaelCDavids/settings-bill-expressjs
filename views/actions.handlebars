@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="twelve columns box">
+            <h2>Phone Usage Records</h2>
+            <table>
+            {{#each records}}
+                <tr>
+                    <td>Item Type:   </td><td>{{itemType}}</td>
+                    <td>Item Cost:   </td><td>R{{cost}}</td>
+                    <td>Time:  </td><td>{{newDate}}</td>
+                </tr>
+            {{/each}}
+            </table>
+        </div>   
+    </div>
+</div>
