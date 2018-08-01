@@ -39,7 +39,13 @@ app.get('/', function (req, res) {
     sms:settingsInstance.allSms(),
     total:settingsInstance.allTotal()
   }
-res.render('home',{billTotal:total});
+  let entered = {
+    call : settingsInstance.CallValue(),
+    sms : settingsInstance.SmsValue(),
+    warning: settingsInstance.WarningValue(),
+    critical : settingsInstance.CriticalValue()
+  }
+res.render('home',{billTotal:total,keep:entered});
 });
 
 app.post('/settings',function(req,res){
