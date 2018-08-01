@@ -37,7 +37,8 @@ app.get('/', function (req, res) {
   let total = {
     call:settingsInstance.allCalls(),
     sms:settingsInstance.allSms(),
-    total:settingsInstance.allTotal()
+    total:settingsInstance.allTotal(),
+    color : settingsInstance.getColor()
   }
   let entered = {
     call : settingsInstance.CallValue(),
