@@ -3,11 +3,17 @@
         <div class="twelve columns box">
             <h2>Phone Usage Records</h2>
             <table>
-            {{#each records}}
                 <tr>
-                    <td>Item Type:   </td><td>{{itemType}}</td>
-                    <td>Item Cost:   </td><td>R{{cost}}</td>
-                    <td>Time:  </td><td>{{newDate}}</td>
+                    <th>Item Type</th>
+                    <th>Item Cost</th>
+                    <th>Time Recorded</th>
+                </tr>
+            {{#each records}}
+                
+                <tr>
+                    <td>{{itemType}}</td>
+                    <td>R{{cost}}</td>
+                    <td>{{newDate}}</td>
                 </tr>
             {{/each}}
             </table>
